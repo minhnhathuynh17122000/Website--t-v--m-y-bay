@@ -1,0 +1,114 @@
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\BanVeMayBay.dll.config
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\BanVeMayBay.dll
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\BanVeMayBay.pdb
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\csc.exe
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\csc.exe.config
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\csc.rsp
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\csi.exe
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\csi.rsp
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\System.AppContext.dll
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\vbc.exe
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\vbc.exe.config
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\vbc.rsp
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\VBCSCompiler.exe
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\EntityFramework.dll
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\EntityFramework.SqlServer.dll
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\PagedList.dll
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\PagedList.Mvc.dll
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\System.Web.Helpers.dll
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\System.Web.Mvc.dll
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\System.Web.Razor.dll
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\System.Web.Webpages.Deployment.dll
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\System.Web.Webpages.dll
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\System.Web.Webpages.Razor.dll
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\EntityFramework.xml
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\EntityFramework.SqlServer.xml
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\PagedList.xml
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\PagedList.Mvc.xml
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\System.Web.Razor.xml
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\System.Web.Webpages.xml
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\System.Web.Webpages.Deployment.xml
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\System.Web.Webpages.Razor.xml
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\System.Web.Helpers.xml
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\System.Web.Mvc.xml
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\obj\Debug\BanVeMayBay.csprojAssemblyReference.cache
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\obj\Debug\BanVeMayBay.csproj.CoreCompileInputs.cache
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\obj\Debug\BanVeMayBay.csproj.CopyComplete
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\obj\Debug\BanVeMayBay.dll
+C:\Users\hungdeptrai\Downloads\duanmaybay\BanVeMayBay\BanVeMayBay\obj\Debug\BanVeMayBay.pdb
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\BanVeMayBay.dll.config
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\BanVeMayBay.dll
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\BanVeMayBay.pdb
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\csc.exe
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\csc.exe.config
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\csc.rsp
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\csi.exe
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\csi.rsp
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\System.AppContext.dll
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\System.Collections.Immutable.dll
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\System.IO.FileSystem.dll
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\System.Reflection.Metadata.dll
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\vbc.exe
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\vbc.exe.config
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\vbc.rsp
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\VBCSCompiler.exe
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\roslyn\VBCSCompiler.exe.config
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\EntityFramework.dll
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\EntityFramework.SqlServer.dll
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\Microsoft.Web.Infrastructure.dll
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\PagedList.dll
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\PagedList.Mvc.dll
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\System.Web.Helpers.dll
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\System.Web.Mvc.dll
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\System.Web.Razor.dll
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\System.Web.Webpages.Deployment.dll
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\System.Web.Webpages.dll
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\System.Web.Webpages.Razor.dll
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\EntityFramework.xml
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\EntityFramework.SqlServer.xml
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\PagedList.xml
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\PagedList.Mvc.xml
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\System.Web.Razor.xml
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\System.Web.Webpages.xml
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\System.Web.Webpages.Deployment.xml
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\System.Web.Webpages.Razor.xml
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\System.Web.Helpers.xml
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\System.Web.Mvc.xml
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\obj\Debug\BanVeMayBay.csprojAssemblyReference.cache
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\obj\Debug\BanVeMayBay.csproj.CoreCompileInputs.cache
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\obj\Debug\BanVeMayBay.csproj.CopyComplete
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\obj\Debug\BanVeMayBay.dll
+E:\New folder (2)\duanmaybay\BanVeMayBay\BanVeMayBay\obj\Debug\BanVeMayBay.pdb

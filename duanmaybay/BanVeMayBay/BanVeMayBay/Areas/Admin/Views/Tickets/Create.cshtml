@@ -1,0 +1,264 @@
+﻿@model BanVeMayBay.Models.ticket
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_layOutAdmin.cshtml";
+}
+
+
+<div class="card card-title bg-white p-1">
+    <div class="row">
+        <div class="col-md-6 "> <h5 class="pl-2 mt-2 text-blues">Quản lý Bài Viết </h5> </div>
+        <div class="col-md-6 m-0">
+            <ol class="breadcrumb bg-white float-sm-right m-0">
+                <li class="breadcrumb-item"><a href="/Admin">Home</a></li>
+                <li class="breadcrumb-item active">Thêm bài viết</li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<section class="container pt-2 card">
+    @Html.Partial("_MessgeAlert")
+    <div class="container bg-white pt-4 ">
+
+        @using (Html.BeginForm("Create", "Tickets", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            @Html.AntiForgeryToken()
+            <div class=" row ">
+                <div class="col-md-4">  </div>
+                <div class="col-md-4"> <h3 class="text-center font-weight-bold text-success "> THÊM VÉ MÁY BAY</h3> </div>
+                <div class="col-md-4 ">
+                    <div class="float-right">
+                        <button class="btn btn-sm bg-success text-white"><i class="far fa-save"></i> Lưu</button>
+                        <a href="~/admin/Tickets" class="btn btn-sm bg-danger text-white"><i class="far fa-window-close"></i> Hủy</a>
+                    </div>
+                </div>
+            </div>
+            <div class=" row ">
+                <div class="col-md-8">
+                    <div>
+                        <label for="psw"><span class="text-secondary font-weight-bold">Tiêu đề vé</span></label>
+                        @Html.EditorFor(model => model.name, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.name, "", new { @class = "text-danger" })
+                    </div>
+                    <div>
+                        <label for="psw"><span class="text-secondary font-weight-bold">Mô tả vé</span></label>
+                        @Html.EditorFor(model => model.description, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.description, "", new { @class = "text-danger" })
+                    </div>
+                   
+                    <div>
+                        <label for="psw"><span class="text-secondary font-weight-bold">Nơi bay</span></label>
+                        <select name="departure_address" class="selectpicker form-control" tabindex="1" required>
+
+                            <option value="TP.Hồ Chí Minh (SGN)" selected="selected">TP.Hồ Chí Minh (SGN)</option>
+                            <option value="Hà Nội (HAN)">Hà Nội (HAN)</option>
+                            <option value="Vân Đồn (VDO)">Vân Đồn (VDO)</option>
+                            <option value="Hải Phòng (HPH)">Hải Phòng (HPH)</option>
+
+                            <option value="Thanh Hóa (THD)">Thanh Hóa (THD)</option>
+                            <option value="Vinh (VII)">Vinh (VII)</option>
+                            <option value="Đồng Hới (VDH)">Đồng Hới (VDH)</option>
+                            <option value="Huế (HUI)">Huế (HUI)</option>
+                            <option value="Đà Nẵng (DAD)">Đà Nẵng (DAD)</option>
+                            <option value="Chu Lai (VCL)">Chu Lai (VCL)</option>
+                            <option value="Quy Nhơn (UIH)">Quy Nhơn (UIH)</option>
+                            <option value="Tuy Hòa (TBB)">Tuy Hòa (TBB)</option>
+                            <option value="Nha Trang (CXR)">Nha Trang (CXR)</option>
+
+
+                            <option value="Đà Lạt (DLI)">Đà Lạt (DLI)</option>
+                            <option value="Pleiku (PXU)">Pleiku (PXU)</option>
+                            <option value="Ban Mê Thuột (BMV)">Ban Mê Thuột (BMV)</option>
+
+                            <option value="Cần Thơ (VCA)">Cần Thơ (VCA)</option>
+                            <option value="Phú Quốc (PQC)">Phú Quốc (PQC)</option>
+
+                            <option value="" disabled="" class="grot">Ấn Độ</option>
+                            <option value="New Delhi (DEL)">New Delhi (DEL)</option>
+                            <option value="Mumbai - Terminal 2 (BOM)">Mumbai - Terminal 2 (BOM)</option>
+
+                            <option value="" disabled="" class="grot">Thailand</option>
+                            <option value="Bangkok (BKK)">Bangkok (BKK)</option>
+                            <option value="Phuket (CNX)">Chiang Mai (CNX)</option>
+                            <option value="Phuket (HKT)">Phuket (HKT)</option>
+                            <option value="Utapao (UTP)">Pattaya - Utapao (UTP)</option>
+
+                            <option value="" disabled="" class="grot">Indonesia</option>
+                            <option value="Jakarta (CGK)">Jakarta (CGK)</option>
+                            <option value="Ngurah Rai - Bali (DPS)">Ngurah Rai - Bali (DPS)</option>
+
+                            <option value="" disabled="" class="grot">Singapore</option>
+                            <option value="Singapore (SIN)">Singapore Terminal 4(SIN)</option>
+
+                            <option value="" disabled="" class="grot">Malaysia</option>
+                            <option value="Kuala Lumpur (KUL)">Kuala Lumpur KLIA (KUL)</option>
+
+                            <option value="" disabled="" class="grot">Japan</option>
+                            <option value="Osaka - Terminal 1 (KIX)">Osaka - Terminal 1 (KIX)</option>
+                            <option value="Tokyo Narita (NRT)">Tokyo Narita (NRT)</option>
+                            <option value="Haneda Tokyo (HND)">Haneda Tokyo (HND)</option>
+
+                            <option value="" disabled="" class="grot">Korea</option>
+                            <option value="Seoul (ICN)">Seoul (ICN)</option>
+                            <option value="Busan (PUS)">Busan (PUS)</option>
+                            <option value="Daegu (TAE)">Daegu (TAE)</option>
+
+                            <option value="" disabled="" class="grot">Hong  Kong</option>
+                            <option value="Hồng Kông (HKG)">Hong Kong (HKG)</option>
+
+                            <option value="" disabled="" class="grot">Cambodia</option>
+                            <option value="Phnom penh (PNH)">Phnom penh (PNH)</option>
+                            <option value="Siem Reap (REP)">Siem Reap (REP)</option>
+
+                            <option value="" disabled="" class="grot">Taiwan</option>
+                            <option value="Taipei (TPE)">Taipei (TPE)</option>
+                            <option value="Cao Hùng (KHH)">Cao Hùng (KHH)</option>
+                            <option value="Đài Nam (TNN)">Đài Nam (TNN)</option>
+                            <option value="Đài Trung (RMQ)">Đài Trung (RMQ)</option>
+
+                            <option value="" disabled="" class="grot">China</option>
+                            <option value="Hàng Châu (HGH)">Hàng Châu (HGH)</option>
+                            <option value="Hải Khẩu (HAK)">Hải Khẩu (HAK)</option>
+                            <option value="Hợp Phì (HFE)">Hợp Phì (HFE)</option>
+                            <option value="Macau (MFM)">Macau (MFM)</option>
+
+                            <option value="" disabled="" class="grot">Myanmar</option>
+                            <option value="Yangon (RGN)">Yangon (RGN)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="psw"><span class="text-secondary font-weight-bold">Nơi đến</span></label>
+                        <select name="arrival_address" class="selectpicker form-control" tabindex="1">
+
+                            <option value="TP.Hồ Chí Minh (SGN)">TP.Hồ Chí Minh (SGN)</option>
+                            <option value="Hà Nội (HAN)">Hà Nội (HAN)</option>
+                            <option value="Vân Đồn (VDO)">Vân Đồn (VDO)</option>
+                            <option value="Hải Phòng (HPH)">Hải Phòng (HPH)</option>
+
+                            <option value="Thanh Hóa (THD)">Thanh Hóa (THD)</option>
+                            <option value="Vinh (VII)">Vinh (VII)</option>
+                            <option value="Đồng Hới (VDH)">Đồng Hới (VDH)</option>
+                            <option value="Huế (HUI)">Huế (HUI)</option>
+                            <option value="Đà Nẵng (DAD)">Đà Nẵng (DAD)</option>
+                            <option value="Chu Lai (VCL)">Chu Lai (VCL)</option>
+                            <option value="Quy Nhơn (UIH)" selected="selected">Quy Nhơn (UIH)</option>
+                            <option value="Tuy Hòa (TBB)">Tuy Hòa (TBB)</option>
+                            <option value="Nha Trang (CXR)">Nha Trang (CXR)</option>
+
+
+                            <option value="Đà Lạt (DLI)">Đà Lạt (DLI)</option>
+                            <option value="Pleiku (PXU)">Pleiku (PXU)</option>
+                            <option value="Ban Mê Thuột (BMV)">Ban Mê Thuột (BMV)</option>
+
+                            <option value="Cần Thơ (VCA)">Cần Thơ (VCA)</option>
+                            <option value="Phú Quốc (PQC)">Phú Quốc (PQC)</option>
+
+                            <option value="" disabled="" class="grot">Ấn Độ</option>
+                            <option value="New Delhi (DEL)">New Delhi (DEL)</option>
+                            <option value="Mumbai - Terminal 2 (BOM)">Mumbai - Terminal 2 (BOM)</option>
+
+                            <option value="" disabled="" class="grot">Thailand</option>
+                            <option value="Bangkok (BKK)">Bangkok (BKK)</option>
+                            <option value="Phuket (CNX)">Chiang Mai (CNX)</option>
+                            <option value="Phuket (HKT)">Phuket (HKT)</option>
+                            <option value="Utapao (UTP)">Pattaya - Utapao (UTP)</option>
+
+                            <option value="" disabled="" class="grot">Indonesia</option>
+                            <option value="Jakarta (CGK)">Jakarta (CGK)</option>
+                            <option value="Ngurah Rai - Bali (DPS)">Ngurah Rai - Bali (DPS)</option>
+
+                            <option value="" disabled="" class="grot">Singapore</option>
+                            <option value="Singapore (SIN)">Singapore Terminal 4(SIN)</option>
+
+                            <option value="" disabled="" class="grot">Malaysia</option>
+                            <option value="Kuala Lumpur (KUL)">Kuala Lumpur KLIA (KUL)</option>
+
+                            <option value="" disabled="" class="grot">Japan</option>
+                            <option value="Osaka - Terminal 1 (KIX)">Osaka - Terminal 1 (KIX)</option>
+                            <option value="Tokyo Narita (NRT)">Tokyo Narita (NRT)</option>
+                            <option value="Haneda Tokyo (HND)">Haneda Tokyo (HND)</option>
+
+                            <option value="" disabled="" class="grot">Korea</option>
+                            <option value="Seoul (ICN)">Seoul (ICN)</option>
+                            <option value="Busan (PUS)">Busan (PUS)</option>
+                            <option value="Daegu (TAE)">Daegu (TAE)</option>
+
+                            <option value="" disabled="" class="grot">Hong  Kong</option>
+                            <option value="Hồng Kông (HKG)">Hong Kong (HKG)</option>
+
+                            <option value="" disabled="" class="grot">Cambodia</option>
+                            <option value="Phnom penh (PNH)">Phnom penh (PNH)</option>
+                            <option value="Siem Reap (REP)">Siem Reap (REP)</option>
+
+                            <option value="" disabled="" class="grot">Taiwan</option>
+                            <option value="Taipei (TPE)">Taipei (TPE)</option>
+                            <option value="Cao Hùng (KHH)">Cao Hùng (KHH)</option>
+                            <option value="Đài Nam (TNN)">Đài Nam (TNN)</option>
+                            <option value="Đài Trung (RMQ)">Đài Trung (RMQ)</option>
+
+                            <option value="" disabled="" class="grot">China</option>
+                            <option value="Hàng Châu (HGH)">Hàng Châu (HGH)</option>
+                            <option value="Hải Khẩu (HAK)">Hải Khẩu (HAK)</option>
+                            <option value="Hợp Phì (HFE)">Hợp Phì (HFE)</option>
+                            <option value="Macau (MFM)">Macau (MFM)</option>
+
+                            <option value="" disabled="" class="grot">Myanmar</option>
+                            <option value="Yangon (RGN)">Yangon (RGN)</option>
+                        </select>
+
+                    </div>
+                    <div>
+                        <label for="psw"><span class="text-secondary font-weight-bold">Sân bay</span></label>
+                        @Html.EditorFor(model => model.airport, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.airport, "", new { @class = "text-danger" })
+                    </div>
+
+                </div>
+                <div class="col-md-4 ">
+                    <div>
+                        <label for="psw"><span class="text-secondary font-weight-bold">Loại vé</span></label>
+                        <select name="ticketType" class="selectpicker form-control" tabindex="1">
+                            <option selected value="Thường">Thường</option>
+                            <option value="Thương gia">Thương gia</option>
+                        </select>
+                      
+                    </div>
+
+
+                    <div>
+                        
+                        <label for="psw"><span class="text-secondary font-weight-bold">Ngày bay</span></label>
+                        <input type="date" name="departure_date" class="form-control" value="" required />
+                    </div>
+                    <div>
+                        <label for="psw"><span class="text-secondary font-weight-bold">Số ghế</span></label>
+                        @Html.EditorFor(model => model.guestTotal, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.guestTotal, "", new { @class = "text-danger" })
+
+                    </div>
+                    <div>
+                        <label for="psw"><span class="text-secondary font-weight-bold">Hãng hàng không</span></label>
+                        <input type="file" class="form-control" name="airline" required />
+                        @Html.ValidationMessageFor(model => model.airline, "", new { @class = "text-danger" })
+                    </div>
+                    <div>
+                        <label for="psw"><span class="text-secondary font-weight-bold">Số tiền vé</span></label>
+                        <input type="number" name="price" class="form-control" value="" />
+                    </div>
+                    <div>
+                        <label for="psw"><span class="text-secondary font-weight-bold">Trạng thái</span></label>
+                        <select name="status" class="selectpicker form-control" tabindex="1">
+                            <option value="1">Hiện</option>
+                            <option value="2">Ẩn</option>
+                        </select>
+                    </div>
+
+                </div>
+
+
+            </div>
+        }
+    </div>
+</section>

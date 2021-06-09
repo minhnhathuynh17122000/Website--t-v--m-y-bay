@@ -1,0 +1,366 @@
+﻿@model IEnumerable<BanVeMayBay.Models.ticket>
+@{
+    ViewBag.Title = "Trang Chủ";
+    Layout = "~/Views/Shared/_layOutSite.cshtml";
+}
+<section class="mt_search" style="margin-top:50px !important; ">
+    <div class="container card bg-white" style="padding:30px !important; ">
+        <div class="search-content-slider">
+            <div class="section-title text-center ">
+                <h2>TÌM KIẾM CHUYẾN BAY CỦA BẠN</h2>               
+            </div>
+            <form action="~/Site/flightSearch" method="POST" id="form-search">
+                <div class="radio" align="center">
+                    <label><input value="disable" type="radio" id="typeticket" name="typeticket" checked>Vé một Chiều</label>
+                    <label><input value="enable" type="radio" id="typeticket" name="typeticket">Khứ Hồi</label>
+                </div>
+                <input type="hidden" id="ticketCheck" value="" />
+
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="table_item">
+                            <div class="form-group">
+                                <select name="departure_address" class="selectpicker form-control" tabindex="1" required>
+
+                                    <option value="TP.Hồ Chí Minh (SGN)" selected="selected">TP.Hồ Chí Minh (SGN)</option>
+                                    <option value="Hà Nội (HAN)">Hà Nội (HAN)</option>
+                                    <option value="Vân Đồn (VDO)">Vân Đồn (VDO)</option>
+                                    <option value="Hải Phòng (HPH)">Hải Phòng (HPH)</option>
+
+                                    <option value="Thanh Hóa (THD)">Thanh Hóa (THD)</option>
+                                    <option value="Vinh (VII)">Vinh (VII)</option>
+                                    <option value="Đồng Hới (VDH)">Đồng Hới (VDH)</option>
+                                    <option value="Huế (HUI)">Huế (HUI)</option>
+                                    <option value="Đà Nẵng (DAD)">Đà Nẵng (DAD)</option>
+                                    <option value="Chu Lai (VCL)">Chu Lai (VCL)</option>
+                                    <option value="Quy Nhơn (UIH)">Quy Nhơn (UIH)</option>
+                                    <option value="Tuy Hòa (TBB)">Tuy Hòa (TBB)</option>
+                                    <option value="Nha Trang (CXR)">Nha Trang (CXR)</option>
+
+
+                                    <option value="Đà Lạt (DLI)">Đà Lạt (DLI)</option>
+                                    <option value="Pleiku (PXU)">Pleiku (PXU)</option>
+                                    <option value="Ban Mê Thuột (BMV)">Ban Mê Thuột (BMV)</option>
+
+                                    <option value="Cần Thơ (VCA)">Cần Thơ (VCA)</option>
+                                    <option value="Phú Quốc (PQC)">Phú Quốc (PQC)</option>
+
+                                    <option value="" disabled="" class="grot">Ấn Độ</option>
+                                    <option value="New Delhi (DEL)">New Delhi (DEL)</option>
+                                    <option value="Mumbai - Terminal 2 (BOM)">Mumbai - Terminal 2 (BOM)</option>
+
+                                    <option value="" disabled="" class="grot">Thailand</option>
+                                    <option value="Bangkok (BKK)">Bangkok (BKK)</option>
+                                    <option value="Phuket (CNX)">Chiang Mai (CNX)</option>
+                                    <option value="Phuket (HKT)">Phuket (HKT)</option>
+                                    <option value="Utapao (UTP)">Pattaya - Utapao (UTP)</option>
+
+                                    <option value="" disabled="" class="grot">Indonesia</option>
+                                    <option value="Jakarta (CGK)">Jakarta (CGK)</option>
+                                    <option value="Ngurah Rai - Bali (DPS)">Ngurah Rai - Bali (DPS)</option>
+
+                                    <option value="" disabled="" class="grot">Singapore</option>
+                                    <option value="Singapore (SIN)">Singapore Terminal 4(SIN)</option>
+
+                                    <option value="" disabled="" class="grot">Malaysia</option>
+                                    <option value="Kuala Lumpur (KUL)">Kuala Lumpur KLIA (KUL)</option>
+
+                                    <option value="" disabled="" class="grot">Japan</option>
+                                    <option value="Osaka - Terminal 1 (KIX)">Osaka - Terminal 1 (KIX)</option>
+                                    <option value="Tokyo Narita (NRT)">Tokyo Narita (NRT)</option>
+                                    <option value="Haneda Tokyo (HND)">Haneda Tokyo (HND)</option>
+
+                                    <option value="" disabled="" class="grot">Korea</option>
+                                    <option value="Seoul (ICN)">Seoul (ICN)</option>
+                                    <option value="Busan (PUS)">Busan (PUS)</option>
+                                    <option value="Daegu (TAE)">Daegu (TAE)</option>
+
+                                    <option value="" disabled="" class="grot">Hong  Kong</option>
+                                    <option value="Hồng Kông (HKG)">Hong Kong (HKG)</option>
+
+                                    <option value="" disabled="" class="grot">Cambodia</option>
+                                    <option value="Phnom penh (PNH)">Phnom penh (PNH)</option>
+                                    <option value="Siem Reap (REP)">Siem Reap (REP)</option>
+
+                                    <option value="" disabled="" class="grot">Taiwan</option>
+                                    <option value="Taipei (TPE)">Taipei (TPE)</option>
+                                    <option value="Cao Hùng (KHH)">Cao Hùng (KHH)</option>
+                                    <option value="Đài Nam (TNN)">Đài Nam (TNN)</option>
+                                    <option value="Đài Trung (RMQ)">Đài Trung (RMQ)</option>
+
+                                    <option value="" disabled="" class="grot">China</option>
+                                    <option value="Hàng Châu (HGH)">Hàng Châu (HGH)</option>
+                                    <option value="Hải Khẩu (HAK)">Hải Khẩu (HAK)</option>
+                                    <option value="Hợp Phì (HFE)">Hợp Phì (HFE)</option>
+                                    <option value="Macau (MFM)">Macau (MFM)</option>
+
+                                    <option value="" disabled="" class="grot">Myanmar</option>
+                                    <option value="Yangon (RGN)">Yangon (RGN)</option>
+                                </select>
+                                <i class="flaticon-maps-and-flags"></i>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="table_item">
+                            <div class="form-group">
+                                <select name="arrival_address" class="selectpicker form-control" tabindex="1">
+
+                                    <option value="TP.Hồ Chí Minh (SGN)">TP.Hồ Chí Minh (SGN)</option>
+                                    <option value="Hà Nội (HAN)">Hà Nội (HAN)</option>
+                                    <option value="Vân Đồn (VDO)">Vân Đồn (VDO)</option>
+                                    <option value="Hải Phòng (HPH)">Hải Phòng (HPH)</option>
+
+                                    <option value="Thanh Hóa (THD)">Thanh Hóa (THD)</option>
+                                    <option value="Vinh (VII)">Vinh (VII)</option>
+                                    <option value="Đồng Hới (VDH)">Đồng Hới (VDH)</option>
+                                    <option value="Huế (HUI)">Huế (HUI)</option>
+                                    <option value="Đà Nẵng (DAD)">Đà Nẵng (DAD)</option>
+                                    <option value="Chu Lai (VCL)">Chu Lai (VCL)</option>
+                                    <option value="Quy Nhơn (UIH)" selected="selected">Quy Nhơn (UIH)</option>
+                                    <option value="Tuy Hòa (TBB)">Tuy Hòa (TBB)</option>
+                                    <option value="Nha Trang (CXR)">Nha Trang (CXR)</option>
+
+
+                                    <option value="Đà Lạt (DLI)">Đà Lạt (DLI)</option>
+                                    <option value="Pleiku (PXU)">Pleiku (PXU)</option>
+                                    <option value="Ban Mê Thuột (BMV)">Ban Mê Thuột (BMV)</option>
+
+                                    <option value="Cần Thơ (VCA)">Cần Thơ (VCA)</option>
+                                    <option value="Phú Quốc (PQC)">Phú Quốc (PQC)</option>
+
+                                    <option value="" disabled="" class="grot">Ấn Độ</option>
+                                    <option value="New Delhi (DEL)">New Delhi (DEL)</option>
+                                    <option value="Mumbai - Terminal 2 (BOM)">Mumbai - Terminal 2 (BOM)</option>
+
+                                    <option value="" disabled="" class="grot">Thailand</option>
+                                    <option value="Bangkok (BKK)">Bangkok (BKK)</option>
+                                    <option value="Phuket (CNX)">Chiang Mai (CNX)</option>
+                                    <option value="Phuket (HKT)">Phuket (HKT)</option>
+                                    <option value="Utapao (UTP)">Pattaya - Utapao (UTP)</option>
+
+                                    <option value="" disabled="" class="grot">Indonesia</option>
+                                    <option value="Jakarta (CGK)">Jakarta (CGK)</option>
+                                    <option value="Ngurah Rai - Bali (DPS)">Ngurah Rai - Bali (DPS)</option>
+
+                                    <option value="" disabled="" class="grot">Singapore</option>
+                                    <option value="Singapore (SIN)">Singapore Terminal 4(SIN)</option>
+
+                                    <option value="" disabled="" class="grot">Malaysia</option>
+                                    <option value="Kuala Lumpur (KUL)">Kuala Lumpur KLIA (KUL)</option>
+
+                                    <option value="" disabled="" class="grot">Japan</option>
+                                    <option value="Osaka - Terminal 1 (KIX)">Osaka - Terminal 1 (KIX)</option>
+                                    <option value="Tokyo Narita (NRT)">Tokyo Narita (NRT)</option>
+                                    <option value="Haneda Tokyo (HND)">Haneda Tokyo (HND)</option>
+
+                                    <option value="" disabled="" class="grot">Korea</option>
+                                    <option value="Seoul (ICN)">Seoul (ICN)</option>
+                                    <option value="Busan (PUS)">Busan (PUS)</option>
+                                    <option value="Daegu (TAE)">Daegu (TAE)</option>
+
+                                    <option value="" disabled="" class="grot">Hong  Kong</option>
+                                    <option value="Hồng Kông (HKG)">Hong Kong (HKG)</option>
+
+                                    <option value="" disabled="" class="grot">Cambodia</option>
+                                    <option value="Phnom penh (PNH)">Phnom penh (PNH)</option>
+                                    <option value="Siem Reap (REP)">Siem Reap (REP)</option>
+
+                                    <option value="" disabled="" class="grot">Taiwan</option>
+                                    <option value="Taipei (TPE)">Taipei (TPE)</option>
+                                    <option value="Cao Hùng (KHH)">Cao Hùng (KHH)</option>
+                                    <option value="Đài Nam (TNN)">Đài Nam (TNN)</option>
+                                    <option value="Đài Trung (RMQ)">Đài Trung (RMQ)</option>
+
+                                    <option value="" disabled="" class="grot">China</option>
+                                    <option value="Hàng Châu (HGH)">Hàng Châu (HGH)</option>
+                                    <option value="Hải Khẩu (HAK)">Hải Khẩu (HAK)</option>
+                                    <option value="Hợp Phì (HFE)">Hợp Phì (HFE)</option>
+                                    <option value="Macau (MFM)">Macau (MFM)</option>
+
+                                    <option value="" disabled="" class="grot">Myanmar</option>
+                                    <option value="Yangon (RGN)">Yangon (RGN)</option>
+                                </select>
+                                <i class="flaticon-maps-and-flags"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="table_item">
+                            <div class="form-group">
+                                <select name="songuoi" class="selectpicker form-control" tabindex="1">
+                                    <option value="1">Số người (Mặc định 1)</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                   
+                                </select>
+                                <i class="flaticon-box"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="table_item">
+                            <div class="form-group ">
+                                <div class='input-group date' id='datetimepicker1'>
+                                    <input type="text" id="departure_date" name="departure_date" class="form-control" value="Ngày Bay" onclick="return 0" />
+                                    <i class="flaticon-calendar"></i>
+
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                                    </span>
+
+                                </div>
+                                <span class="text-danger" id="ngaybay"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="table_item">
+                            <div class="form-group">
+                                <div class='input-group date' id='datetimepicker2'>
+                                    <input type='text' id="arrival_date" name="arrival_date" class="form-control" value="Ngày về" required />
+                                    <i class="flaticon-calendar"></i>
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                                    </span>
+                               
+                                </div>
+                                <span class="text-danger" id="ngayve"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12  ">
+                        <div class="table_item " align="center">
+                            <div class="search ">
+                                <button type="submit" class="btn-blue btn-red ">Tìm Kiếm chuyến bay</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Top Destinations -->
+<section class="flight-destinations">
+    <div class="container bg-white">
+        <div class="row">
+            <form action="~/Checkout/Index" method="post">
+                <input type="hidden" name="songuoi" value="@ViewBag.songuoi" />
+                <div class="col-md-12">
+                    <div class="flight-head">
+                        <div class="">
+                            <div class="col-md-10">
+                                <nav aria-label="breadcrumb">
+                                    @{var Date = ViewBag.dateNow; }
+                                    <span style="font-weight:bold; font-size:22px;color:#ff6a00;"><i class="fas fa-fighter-jet"></i> Các chuyến bay trong ngày: @Date.ToString("dd-MM-yyyy") </span>
+
+                                </nav>
+                            </div>
+                          
+                            <div class="col-md-2"> <a href="~/chuyen-bay-trong-ngay" class="btn-blue btn-red btn-style-1 w-100">Xem tất cả</a></div>
+                        </div>
+                    </div>
+                   
+                    </div>
+                    <div class="flight-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Hãng hàng không</th>
+                                    <th>Nơi khởi hành</th>
+                                    <th>Nơi đến</th>
+                                    <th>Xem chi tiết</th>
+                                    <th>Giá chuyến bay</th>
+                                  
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td class="text-center">
+                                            <img src="~/public/images/flight/@item.airline" alt="">
+                                        </td>
+                                        <td>
+                                            <h6>@item.departure_address</h6>
+                                            <p>Sân bay (@item.departure_address)</p>
+                                        </td>
+                                        <td>
+                                            <h6>@item.arrival_address</h6>
+                                            <P>Sân bay (@item.arrival_address)</P>
+                                        </td>
+                                        <td>
+                                            <a href="~/chuyen-bay/@item.id">Xem chi tiết</a>
+                                        </td>
+                                        <td>
+                                            <h6><strong class="color-red-3">@item.price.ToString("N0") VND</strong></h6>
+                                            <p class="emi">(loại tiền - VND)</p>
+                                        </td>
+                                        
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                    </div>
+            </form>
+        </div>
+    </div>
+
+</section>
+    <script>
+        $("#form-search").submit(function (event) {
+            $("#ngaybay").text("");
+            $("#ngayve").text("");
+           var ngaybay = $("#departure_date").val();
+            var ngayve = $("#arrival_date").val();
+            var typeticket = $("#ticketCheck").val();
+
+           
+            if (ngaybay == "Ngày Bay") {
+                $("#ngaybay").text("Vui lòng chọn ngày bay");
+              
+                return false;
+
+            }
+            if (typeticket == 2) {
+                if (ngayve == "Ngày về") {
+                    $("#ngayve").text("Vui lòng chọn ngày về");
+                    return false
+                }
+                else {
+                    return true;
+                }
+            }
+            return true;
+		
+	});
+        $(document).ready(function () {
+            // By Default Disable radio button
+            $("#arrival_date").attr('disabled', true);
+            $("form input:radio").change(function () {
+                if ($(this).val() == "enable") {
+                    $("#arrival_date").attr('disabled', false);
+                    $("#ticketCheck").val(2);
+                }
+                else {
+                    $("#arrival_date").attr('disabled', true);
+                    $("#ticketCheck").val(1);
+                }
+            });
+        });
+    </script>

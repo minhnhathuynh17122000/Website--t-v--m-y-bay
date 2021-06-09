@@ -1,0 +1,22 @@
+﻿<div class="upper-head clearfix " style="background-color:powderblue;">
+    <div class="container ">
+        <div class="upper-head-inner">
+          
+            <div class="login-btn pull-right">
+              @if (ViewBag.sessionFullname != null)
+            {
+
+                <p> Xin Chào: @ViewBag.sessionFullname </p>
+                <a  href="~/tai-khoan"><i class="fas fa-user"></i> Tài khoản</a>
+                <a href="~/Customer/logout"> Đăng xuất</a>
+            }
+            else
+            {
+                <a href="~/dang-nhap"><i class="fa fa-unlock-alt"></i> Đăng nhập</a>
+                <a href="~/dang-ky"><i class="fa fa-user-plus"></i> Đăng ký</a>
+            }
+
+        </div>
+        </div>
+    </div>
+</div>

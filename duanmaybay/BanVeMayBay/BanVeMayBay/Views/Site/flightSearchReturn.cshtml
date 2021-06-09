@@ -1,0 +1,131 @@
+﻿@using PagedList.Mvc;
+@model PagedList.IPagedList<BanVeMayBay.Models.ticket>
+@{
+    ViewBag.Title = "flightSearch";
+    Layout = "~/Views/Shared/_layOutSite.cshtml";
+}
+<section class="flight-destinations">
+    <div class="container bg-white">
+        <div class="row">
+            <form action="~/Checkout/Index" method="post">
+                <input type="hidden" name="songuoi" value="@ViewBag.songuoi" />
+                <div class="col-md-12 col-sm-12">
+                    <div class="flight-head">
+                        <div class="">
+                            <nav aria-label="breadcrumb">
+                                <span style="font-weight:bold; font-size:22px;"><i class="fas fa-fighter-jet"></i> Chọn chuyến đi </span>
+                                <span style="font-weight:bold; color:#ff6a00; font-size:22px;"> @ViewBag.noibay </span> - Đến -<span style="font-weight:bold; color:#ff6a00; font-size:22px;"> @ViewBag.noiVe </span><br />
+                                <span style="font-weight:bold; font-size:22px;"><i class="fas fa-calendar-day"></i> Ngày bay </span>
+                                <span style="font-weight:bold; color:#ff0000; font-size:22px;"> @ViewBag.ngaybay </span>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <div class="flight-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Hãng hàng không</th>
+                                    <th>Nơi khởi hành</th>
+                                    <th>Nơi đến</th>
+                                    <th>Xem chi tiết</th>
+                                    <th>Giá chuyến bay</th>
+                                    <th>#</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td class="text-center">
+                                            <img width="70" src="~/public/images/flight/@item.airline" alt="">
+                                        </td>
+                                        <td>
+                                            <h6>@item.departure_address</h6>
+                                            <p>Sân bay (@item.departure_address)</p>
+                                        </td>
+                                        <td>
+                                            <h6>@item.arrival_address</h6>
+                                            <P>Sân bay (@item.arrival_address)</P>
+                                        </td>
+                                        <td>
+                                            <a href="~/chuyen-bay/@item.id">Xem chi tiết</a>
+                                        </td>
+                                        <td>
+                                            <h6><strong class="color-red-3">@item.price.ToString("N0") VND</strong></h6>
+                                            <p class="emi">(loại tiền - VND)</p>
+                                        </td>
+                                        <td>
+                                            @Html.RadioButton("datve", item.id, new { name = "idTitket", required = "required" })
+                                            @Html.Label("Đặt vé")
+                                        </td>
+                                    </tr>
+                                }
+
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+
+</div>
+    </div>
+</section>
+    <div class="container bg-white">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="flight-head">
+                    <div class="">
+                        <nav aria-label="breadcrumb">
+                            <span style="font-weight:bold; font-size:22px;"><i class="fas fa-fighter-jet"></i> Chọn chuyến về </span>
+                            <span style="font-weight:bold; color:#ff6a00; font-size:22px;"> @ViewBag.noive </span> - Đến -<span style="font-weight:bold; color:#ff6a00; font-size:22px;"> @ViewBag.noibay </span><br />
+                            <span style="font-weight:bold; font-size:22px;"><i class="fas fa-calendar-day"></i> Ngày bay </span>
+                            <span style="font-weight:bold; color:#ff0000; font-size:22px;"> @ViewBag.ngayden </span>
+                        </nav>
+                    </div>
+                </div>
+                Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
+                <div class="flight-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Hãng hàng không</th>
+                                <th>Nơi khởi hành</th>
+                                <th>Nơi đến</th>
+                                <th>Xem chi tiết</th>
+                                <th>Giá chuyến bay</th>
+                                <th>#</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @Html.Action("return_ticket", "Site", new { date = ViewBag.date, noibay = ViewBag.noibay, noiden = ViewBag.noiVe })
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="container ">
+                    <div class="row">
+                        <div class="col-md-10">
+
+                        </div>
+
+                        <button class="btn-blue btn-red btn-style-1 " type="submit">Tiếp theo</button>
+                    </div>
+                </div>
+            </div>
+
+            </form>
+        </div>
+    </div>
+
+   
+<!-- Destination Ends -->
+<script>
+    $("#active_@Model.PageNumber").addClass("active");
+
+    function ajaxShowItem(t) {
+        console.log(t.value)
+    }
+</script>
