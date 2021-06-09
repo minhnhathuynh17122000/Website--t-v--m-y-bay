@@ -1,0 +1,122 @@
+﻿@model IEnumerable<BanVeMayBay.Models.ticket>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_layOutSite.cshtml";
+}
+<section class="booking">
+    <div class="container bg-white">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="booking-form booking-outer">
+                    <div class="payment-info detail">
+                        <div class="row">
+                            @if (Model.Count() > 1)
+                            {
+                                <h4 class="text-danger"> VÉ KHỨ HỒI </h4>
+                            }
+                            else
+                            {
+                                <h4 class="text-danger"> VÉ 1 CHIỀU </h4>
+                            }
+                            @{ var sum = 0;}
+                            @foreach (var item in Model)
+                            {
+
+                                <div class="col-md-6">
+
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td class="title">Tổng tiền</td>
+                                                <td class="b-id text-danger">@item.price.ToString("N0") VND</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="title">Ngày bay</td>
+                                                <td>@item.departure_date</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="title">Nơi bay</td>
+                                                <td>@item.departure_address</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="title">Nơi đến</td>
+                                                <td>@item.arrival_address</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                sum += (int)item.price;
+                            }
+                            @{ sum = sum * (int)ViewBag.songuoi;
+                                }
+                            <h3 class="text-danger">Tổng tiền: @sum.ToString("N0") VND</h3>
+                        </div>
+                    </div>
+                    <form action="~/Checkout/checkOut" method="post">
+                        <input type="hidden" value="@ViewBag.ve1" name="veOnvay" />
+                        <input type="hidden" value="@ViewBag.ve2" name="veReturn" />
+                        <input type="hidden" value="@sum" name="total" />
+                        <div class="row">
+                            <div class="form-group col-xs-6">
+                                <label>Sống người:</label>
+                                <input  type="text" class="form-control" value="@ViewBag.songuoi" disabled>
+                                <input name="guestTotal" type="hidden" class="form-control" value="@ViewBag.songuoi">
+                            </div>
+                            <div class="form-group col-xs-12">
+                                <label>Tên khách hàng:</label>
+                                <input name="name" type="text" class="form-control" id="Name" placeholder="Tên của bạn." required>
+                            </div>
+                            <div class="form-group col-xs-6">
+                                <label>Email:</label>
+                                <input type="email" name="email" class="form-control" id="email" placeholder="abc@xyz.com" required>
+                            </div>
+                            <div class="form-group col-xs-6 col-left-padding">
+                                <label>SDT của bạn:</label>
+                                <input name="phone" type="text" class="form-control" id="phnumber" placeholder="0...." required />
+                            </div>
+
+                            <div class="form-group col-xs-6">
+                                <label>Giới tính:</label>
+                                <select required name="gioitinh">
+
+                                    <option value="female" selected>Nam</option>
+                                    <option value="other">Nữ</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-xs-6 col-left-padding">
+                                <label>Quốc tịch:</label>
+                                <select required name="quoctich">
+                                    <option value="VN">Việt Nam</option>
+                                    <option value="K">Khác</option>
+
+                                </select>
+                            </div>
+                            <div class="textarea col-xs-12">
+                                <label>Lời nhắn:</label>
+                                <textarea name="mess" placeholder="Lời nhắn của bạn cho chúng tôi"></textarea>
+                            </div>
+                            <div class="col-xs-12">
+                                <div class="checkbox-outer">
+                                    <input type="radio" name="payment" value="checkinPayment" checked><label> Thanh toán khi CheckIn tại sân bay</label><br />
+                                    <input type="radio" value="credit" disabled><label class="text-secondary"> <strike>Thanh toán khi bằng ngân hàng</strike> (tạm thời chưa hỗ trợ)</label>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="container ">
+                            <div class="row">
+                                <div class="col-md-10">
+
+                                </div>
+
+                                <button class="btn-blue btn-red btn-style-1 " type="submit">Tiếp theo</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>

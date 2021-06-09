@@ -1,0 +1,71 @@
+﻿@model BanVeMayBay.Models.order
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_layOutAdmin.cshtml";
+}
+
+<div class="container bg-white">
+    <div class="row">
+        <div class="col-md-7">
+            <h3>Chi tiết Order</h3>
+            <table class="table border">
+                <tbody>
+                    <tr>
+                        <td class="title">Booking ID</td>
+                        <td class="b-id">@Model.ID</td>
+                    </tr>
+                    <tr>
+                        <td class="title">Tên khách hàng</td>
+                        <td>@Model.name </td>
+                    </tr>
+                    <tr>
+                        <td class="title">Email</td>
+                        <td>@Model.email</td>
+                    </tr>
+                    <tr>
+                        <td class="title">SDT</td>
+                        <td>@Model.phone</td>
+                    </tr>
+                    <tr>
+                        <td class="title">Số người</td>
+                        <td>@Model.guestTotal</td>
+                    </tr>
+                    <tr>
+                        <td class="title">Giới tính</td>
+                        <td>@Model.gioitinh</td>
+                    </tr>
+                    <tr>
+                        <td class="title">Quốc tịch</td>
+                        <td>@Model.quoctich</td>
+                    </tr>
+                    <tr>
+                        <td class="title">Lời nhắn</td>
+                        <td>@Model.mess</td>
+                    </tr>
+                    <tr>
+                        <td class="title">Ngày tạo</td>
+                        <td>@Model.created_ate (m/d/y)</td>
+                    </tr>
+                    <tr>
+                        <td class="title">Tổng tiền:</td>
+                        <td><h4 class="text-danger"> @Model.total.ToString("N0") VND</h4></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <div class="col-md-5">
+            @Html.Action("_BookingConnfig", "Orders", new { orderId = Model.ID })
+
+        </div>
+    </div>
+</div>
+<style>
+    .title {
+        font-size: 17px;
+        font-weight: bold;
+        padding-right: 50px;
+        color: #ff0000;
+    }
+</style>

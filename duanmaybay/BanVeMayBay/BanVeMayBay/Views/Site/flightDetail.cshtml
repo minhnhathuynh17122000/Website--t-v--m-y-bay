@@ -1,0 +1,70 @@
+﻿@model BanVeMayBay.Models.ticket
+@{
+    ViewBag.Title = "flightDetail";
+    Layout = "~/Views/Shared/_layOutSite.cshtml";
+}
+<section class="booking">
+    <div class="container bg-white" style="padding:20px;">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="booking-confirmed booking-outer">
+                    <div class="confirmation-title">
+                        <div class="form-title form-title-1">
+                            <h2 class="text-danger">Chi tiết vé: @Model.departure_address -> @Model.arrival_address</h2>
+                        </div>
+                        <div class="payment-info detail">
+                            <div class="row">
+                                <div class="col-md-12">
+              
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-12">
+                <table class="table" style="margin-top:20px;">
+                    <tbody>
+                        <tr>
+                            <td class="title">Hãng hàng không</td>
+                            <td> <img src="~/public/images/flight/@Model.airline" alt=""></td>
+                        </tr>
+                        <tr>
+                            <td class="title">Giá vé</td>
+                            <td class="b-id text-danger">@Model.price.ToString("N0") VND</td>
+                        </tr>
+                        <tr>
+                            <td class="title">Ngày bay</td>
+                            <td>@Model.departure_date.ToString("dd-MM-yyyy")</td>
+                        </tr>
+                        <tr>
+                            <td class="title">Nơi bay</td>
+                            <td>@Model.departure_address</td>
+                        </tr>
+                        <tr>
+                            <td class="title">Nơi đến</td>
+                            <td>@Model.arrival_address</td>
+                        </tr>
+                        <tr>
+                            <td class="title">Sân bay</td>
+                            <td>@Model.airport</td>
+                        </tr>
+                        <tr>
+                            <td class="title">Ghế trống</td>
+                            <td>@Model.guestTotal Ghế</td>
+                        </tr>
+                      
+                    </tbody>
+                </table>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+    .title {
+        font-size: 17px;
+        font-weight: bold;
+        padding-right: 50px;
+        color: #ff0000;
+    }
+</style>
